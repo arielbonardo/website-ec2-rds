@@ -18,3 +18,27 @@ Incluye grupos de seguridad que solo permiten conexiones desde la instancia EC2
 Seguridad:
 Grupos de seguridad para la web y la base de datos
 Configuración de acceso restringido a la base de datos
+
+
+#####################################################################################################################################################
+
+Cómo usar este código:
+Asegúrate de tener instalado Terraform y configurado tu acceso a AWS (ya sea con credenciales en ~/.aws/credentials o variables de entorno)
+Guarda el archivo main.tf
+
+Inicializa Terraform:
+terraform init
+
+Comprueba el plan de ejecución:
+terraform plan
+
+Aplica la configuración:
+terraform apply
+
+Cuando finalice, obtendrás la IP pública de tu instancia EC2 y el endpoint de la base de datos RDS.
+
+Consideraciones para producción:
+Cambia las contraseñas y usa métodos más seguros como AWS Secrets Manager
+Limita el acceso SSH a tu dirección IP en lugar de 0.0.0.0/0
+Habilita Multi-AZ para alta disponibilidad en la base de datos
+Considera agregar un balanceador de carga para mayor disponibilidad
