@@ -1,0 +1,20 @@
+Componentes principales:
+
+VPC y Networking:
+Crea una VPC con subredes públicas y privadas
+Implementa un Internet Gateway y NAT Gateway
+Configura tablas de rutas para enrutamiento adecuado
+
+Instancia EC2:
+Despliega una instancia EC2 con Ubuntu
+Instala Nginx automáticamente durante el arranque
+Se conecta a una página HTML simple que muestra información de la conexión a RDS
+
+Base de datos RDS:
+Despliega una instancia MySQL en RDS
+Configurada en una subred privada por seguridad
+Incluye grupos de seguridad que solo permiten conexiones desde la instancia EC2
+
+Seguridad:
+Grupos de seguridad para la web y la base de datos
+Configuración de acceso restringido a la base de datos
